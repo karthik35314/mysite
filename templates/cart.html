@@ -23,9 +23,9 @@
 
  {% include 'navbr.html' %}
  {% for foo in ar %}
-  <p>{{ foo.cname }}</p>
-     <p>{{ foo.cdescription }}</p>
-     <p>{{ foo.img }}</p>
+{#  <p>{{ foo.cname }}</p>#}
+{#     <p>{{ foo.cdescription }}</p>#}
+{#     <p>{{ foo.img }}</p>#}
 
 
 <div class="container bg-black">
@@ -80,7 +80,7 @@
                     <a href="#!" type="button" class="card-link-secondary small text-uppercase"><i
                         class="fas fa-heart mr-1"></i> Move to wish list </a>
                   </div>
-                  <p class="mb-0"><span><strong id="summary">$17.99</strong></span></p class="mb-0">
+{#                  <p class="mb-0"><span><strong id="summary">$17.99</strong></span></p class="mb-0">#}
                 </div>
               </div>
             </div>
@@ -290,7 +290,10 @@
     </div>
   </div>
 </div>
+#########
 
     {% endfor %}
+ </div>
+</body>
 </body>
 </html>

@@ -38,7 +38,7 @@ def courses(request):
 def cart(request):
         return  render(request,'cart.html')
 @csrf_exempt
-def home(request): 
+def home(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         password = request.POST.get('password')
@@ -79,7 +79,7 @@ def fpass(request):
 @csrf_exempt
 def forget(request):
         email=request.POST.session('email')
-        # opass= request.POST.get('opass')
+        opass= request.POST.get('opass')
         npass= request.POST.get('npass')
         cpass= request.POST.get('cpass')
         s = "select * from details"
