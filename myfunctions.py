@@ -38,7 +38,7 @@ def courses(request):
 def cart(request):
         return  render(request,'cart.html')
 @csrf_exempt
-def home(request):
+def home(request): 
         name = request.POST.get('name')
         email = request.POST.get('email')
         password = request.POST.get('password')
