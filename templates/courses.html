@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% csrf_token %}
+{% for foo in ar %}
+
+
+
+<h1>{{ foo.cname }}</h1>
+<h1>{{ foo.ctype }}</h1>
+<h1>{{ foo.cduration }}</h1>
+<h1>{{ foo.cdescription }}</h1>
+<h1>{{ foo.fee }}</h1>
+{% endfor %}
+</body>
+</html>

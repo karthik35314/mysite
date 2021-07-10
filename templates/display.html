@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th>cname</th>
+      <th>ctime</th>
+      <th>ctype</th>
+      <th>cdes</th>
+      <th>cfee</th>
+{% for foo in ar %}
+    <th>{{ foo.cname }}</th>
+    <th>{{ foo.ctype }}</th>
+    <th>{{ foo.cduration }}</th>
+    <th>{{ foo.cdescription }}</th>
+    <th>{{ foo.fee }}</th>
+    <th>{{ foo.img }}</th>
+{% endfor %}
+</body>
+</html>

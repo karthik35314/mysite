@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>coursera</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mystyle.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="mediaelement-and-player.min.js"></script>
+</head>
+
+</head>
+{#<body style="background-color: #23272b">#}
+{% include 'navbr.html' %}
+<br>
+<br>
+<br>
+<img class="boat" style=" position: absolute;
+    width: 176px;
+    border-radius: 206px;
+    margin: 204px;
+    margin-left: 37rem;
+    margin-top: 18rem;" src="data:image/png;base64,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"/>
+<img style="width: 100%;padding:5%;" src="https://i.pinimg.com/originals/2f/d3/d8/2fd3d8e57a9d41c68aec9e1cc2c4cfea.gif"/>
+
+<br/>
+<br/>
+<br/>
+
+     <iframe style="width: 85rem;height: 31rem" src="https://www.youtube.com/embed/JUTsH_zOoX0" title="YouTube video player" loop="1" frameborder="2" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+</iframe>
+
+
+<div class="container-fluid " style="margin-top: 10%">
+    <div class="row justify-content-center">
+        <div class="col-sm-8 ">
+
+            <div class="card-group kar">
+  <div class="card bg-light style=width: 18rem ;">
+    <img src="https://content.techgig.com/thumb/msid-74907723,width-860,resizemode-4/India-lockdown-Techies-invest-their-time-in-upskilling.jpg?66370" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Reach goals</h5>
+      <p class="card-text">Enhance your programming skills by embracing both functional programming and object-oriented programming in this hands-on course on Scala.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIbkWP3gCPlS-nxR55b8sdRFRSYOczy3mPALP0GyItyFRSPPnfgFt_FB5ox4OBWKhgz7c&usqp=CAU" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Availabilities</h5>
+      <p class="card-text">artificial intelligence, machine learning, data science, cloud engineering, and more.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://images.hrtechnologist.com/images/uploads/content_images/reskilling_5def98c452411.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Earn degree</h5>
+      <p class="card-text">All from the world's leading universities in business, computer science, and more.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+
+
+
+
+        </div>
+    </div>
+
+
+</div>
+<div class="container" style="margin-top: 5%">
+<section id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="padding-top: 50px" >
+          <h2 style="color: dodgerblue;padding-top: 2%;padding-bottom: 2%">Coursera Inc. is an American massive open online course provider founded in 2012 by Stanford University </h2>
+          <img class="testimonial-image"   width="50%" height="50%" src="https://cdn.dribbble.com/users/406903/screenshots/5726229/dribbble.png?compress=1&resize=400x300" alt="dog-profile">
+
+
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text mb-3" style="color: dodgerblue">Coursera works with universities and other organizations to offer online courses,.</h2>
+          <img class="testimonial-image"  width="50%" height="50%"  src="https://cdni.iconscout.com/illustration/premium/thumb/college-student-boy-studying-on-laptop-with-e-books-2710149-2261433.png" alt="lady-profile">
+
+
+        </div>
+
+           <div class="carousel-item">
+          <h2 class="testimonial-text mb-3 " style="color: dodgerblue">Enhance your programming skills by embracing both functional programming and object-oriented programming in this hands-on course.</h2>
+          <img class="testimonial-image"  width="50%" height="50%"  src="https://www.kindpng.com/picc/m/667-6672232_svg-animated-image-for-it-website-hd-png.png"/>
+
+        </div>
+
+
+
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" ></span>
+
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+
+      </a>
+    </div>
+
+
+
+  </section>
+
+</div>
+<br>
+<br>
+<br>
+
+<div class="container jumbotron" id="register">
+<h1>Enter your details for registration</h1>
+{% csrf_token %}
+    <form action="home" method="POST">
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+
+      <label for="validationDefault01"> name</label>
+      <input type="text" class="form-control" id="validationDefault01" name="name" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault02">email</label>
+      <input type="text" class="form-control" id="validationDefault02" name="email" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault03">password</label>
+      <input type="password" class="form-control" id="validationDefault03 " name="password"required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault05">address</label>
+      <input type="text" class="form-control" id="validationDefault05" name="address" required>
+    </div>
+  </div>
+         <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault03">security qeuestion what is your lucky num?</label>
+
+      <input type="password" class="form-control" id="validationDefault03 " name="lucky"required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+
+    </div>
+  </div>
+
+
+  <button class="btn btn-primary" type="submit">Submit </button>
+        already having account?<a href="login"> login </a>
+</form>
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

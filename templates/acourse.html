@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load  static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.css' %}">
+</head>
+<body>
+{% include 'navadmin.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>
+                Add Couse Information
+            </h1>
+        </div>
+    </div>
+    {% csrf_token %}
+    <form action="dcourse" method="POST"  enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-sm-12">
+            <input type="text" name="cname" placeholder="Enter Course Name" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <input type="text" name="ctype" placeholder="Enter Course Type" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <input type="text" name="cduration" placeholder="Enter duration(in Months)" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+          <textarea name="cdescription" rows="5" cols="60"> </textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <input type="text" name="cfee" placeholder="Enter Course Fee" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <input type="file" name="myfile" placeholder="Enter imagee" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <input type="Submit"  class="form-control btn-success btn">
+        </div>
+    </div>
+        </form>
+</div>
+</body>
+</html>

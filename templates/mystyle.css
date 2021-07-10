@@ -1,0 +1,41 @@
+.navbar-brand{
+    color: #0f6674 ;
+}
+.navbar{
+    color: #007BFF;
+    font-family: 'Pacifico', cursive;
+}
+.kar{
+    border: 3px solid #007BFF;
+    border-radius : 10px ;
+
+}
+.bart{
+  padding-left: 523px;
+}
+
+.jum {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+#testimonials{
+
+     text-align: center;
+     color: #fff;
+}
+.testimonials-image{
+    width: 50%;
+    border-radius: 100%;
+    margin: 10px;
+
+}
+.boat{
+    position: absolute;
+    width: 176px;
+    border-radius: 206px;
+    margin: 204px;
+    margin-left: 37rem;
+    margin-top: 18rem;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+   {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.css' %}">
+<body>
+<body style="background-color:#b3d7ff">
+<div class="container jumbotron mt-lg-5" >
+{#<h1>Login</h1>#}
+{#{% csrf_token %}#}
+{#    <form action="courses" method="POST">#}
+{#        <div class="row-md-6">#}
+{#  <div class="form-row">#}
+{#    <div class="col-md-6 mb-3">#}
+{#        <label for="validationDefault02">email</label>#}
+{#      <input type="text" class="form-control" id="validationDefault02" name="email" required>#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="form-row">#}
+{#    <div class="col-md-6 mb-3">#}
+{#      <label for="validationDefault03">password</label>#}
+{#      <input type="password" class="form-control" id="validationDefault03 " name="password"required>#}
+{#    </div>#}
+{##}
+{##}
+{#  </div>#}
+{#        <button class="btn btn-primary" type="submit">login</button>#}
+{#      <div class="form-row">#}
+{#            <div class="col-md-6 mb-3">#}
+{#         <a href="forg">forgetpassword</a>#}
+{#            </div></div>#}
+{#    </form>#}
+<div class="row content-row">
+            <div class="mbr-figure col-lg-6">
+              <img width="100%" src="https://image.freepik.com/free-vector/online-registration-sign-up-with-man-sitting-near-smartphone_268404-95.jpg" alt="" title="">
+            </div>
+            <div class="media-content px-5  mbr-white py-4 col-lg-6">
+<h1>Login</h1>
+{% csrf_token %}
+    <form action="courses" method="POST">
+        <div class="row-md-6">
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+        <label for="validationDefault02">email</label>
+      <input type="text" style="width: 161%" class="form-control input-group-lg" id="validationDefault02" name="email" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault03">password</label>
+      <input type="password" style="width: 161%" class="form-control" id="validationDefault03 " name="password"required>
+    </div>
+
+
+  </div>
+        <button class="btn btn-primary" type="submit">login</button>
+      <div class="form-row">
+            <div class="col-md-6 mb-3">
+         <a href="forg">forgetpassword</a>
+            </div></div>
+    </form>
+
+
+              <div class="content-block">
+
+              </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

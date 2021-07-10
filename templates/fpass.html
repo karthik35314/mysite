@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+ {% load static %}
+
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.css' %}">
+<body style="background-color:#b3d7ff">
+{% include 'navbr.html' %}
+<div class="container jumbotron">
+
+<h1>change password</h1>
+{% csrf_token %}
+    <form action="forget" method="POST" >
+  <div class="form-row">
+      <div class="col-md-4 mb-3">
+      <label for="validationDefault02">oldpassword</label>
+      <input type="password" class="form-control" id="validationDefault02" name="opass" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault03">newpassword</label>
+      <input type="password" class="form-control" id="validationDefault03 " name="npass"required>
+    </div>
+       </div>
+<div class="form-row ">
+    <div class="col-md-4 mb-3 ">
+      <label for="validationDefault03">confirmpassword</label>
+      <input type="password" class="form-control" id="validationDefault03 " name="cpass"required>
+    </div>
+
+  </div>
+
+
+  <button class="btn btn-primary" type="submit">Submit form</button>
+<div class="form-row">  <a class="btn-lg btn-danger mt-5" href="login" >logout</a></div>
+    </div>
+    </div>
+
+</form>
+
+
+
+ </div>
+</body>
+</html>

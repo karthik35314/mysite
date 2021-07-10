@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <link rel="stylesheet" href="mystyle.css">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.css' %}">
+</head>
+<body>
+<form action="fo">
+<div class="jumbotron" style="margin: 10%">
+    <div class="jum">
+    <h1>Forget password</h1>
+{#    <div class="row">#}
+{#        <div class="col-sm-6 ">#}
+            <input type="text " placeholder="Enter Email ID" required name="email" class="form-control">
+            <input type="text" placeholder="Enter lucky number" required name="lucky" class="form-control">
+{#        </div>#}
+{#    </div>#}
+{#    <div class="row">#}
+{#        <div class="col-sm-6">#}
+             <input type="submit" value="Get Password" class="btn btn-success form-control">
+{#        </div>#}
+{#    </div>#}
+    </div>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    <link rel="stylesheet" href="{% static 'mystyle.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body style="background-color:#b3d7ff">
+
+
+{% include 'navbr.html' %}
+{#{% for foo in ar %}#}
+{#    <img src="{{ foo.img }}" alt="Not Available" width="200" height="200">#}
+{#{% endfor %}#}
+
+      <div class="container d-flex flex-row flex-wrap justify-content-sm-around mt-lg-5" >
+            {% for foo in ar %}
+
+              <div class="card align-items-cente mb-5" style="width:20rem;height: 63%">
+
+                    <img class="card-img-top "  src="{{ foo.img }}" />
+                      <div class="card-body">
+                              <h5 class="card-title">{{ foo.cname }}</h5>
+                              <p class="card-text">{{ foo.cdescription }}</p>
+                          <a href="move?id={{ foo.id }}" class="btn btn-dark">Join</a>
+
+                      </div>
+              </div>
+
+          {% endfor %}
+      </div>
+
+
+
+
+
+
+<section class="features1 cid-r7io8K1ARy" id="about">
+
+
+
+    <div class="jumbotron">
+        <div class="row content-row">
+            <div class="mbr-figure col-lg-6">
+              <img width="100%" src="https://www.logo-us.com/images/index_top.svg" alt="" title="">
+            </div>
+            <div class="media-content px-5  mbr-white py-4 col-lg-6">
+
+              <div class="content-block">
+                <h2 class="mbr-section-title mbr-fonts-style pb-4 display-2">About us</h2>
+
+                <p class="mbr-text testimonial-text mbr-fonts-style display-7">
+                    contact
+With supporting text below as a natural lead-in to additional content.
+copyrights@2021
+
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
