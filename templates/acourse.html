@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.css' %}">
 </head>
 <body>
-{% include 'navadmin.html' %}
+<body style="background-color:#b3d7ff">
+{#{% include 'navadmin.html' %}#}
+<h1 style="color:deepskyblue;">Admin dashboard</h1>
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -35,7 +37,8 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-          <textarea name="cdescription" rows="5" cols="60"> </textarea>
+{#          <textarea name="cdescription" rows="5"  placeholder="Enter course description" cols="60"> </textarea>#}
+              <input type="text" name="cdescription"   placeholder="Enter Course description" class="form-control">
         </div>
     </div>
     <div class="row">
@@ -45,7 +48,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <input type="file" name="myfile" placeholder="Enter imagee" class="form-control">
+            <input type="file" name="myfile" placeholder="Enter image" class="form-control">
         </div>
     </div>
     <div class="row">

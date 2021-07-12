@@ -24,7 +24,7 @@ from myfunctions import  *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('one', one),
-    path('',home),
+    path('',one),
     path('home',home),
     path('login',login),
     path('course',course),
@@ -43,7 +43,11 @@ urlpatterns = [
    # path("bcourse",bcourse),
     path('imgexample',imgexample),
     # path('imge',imge),
-path('move',move),
+   path('move',move),
+    path('adminlogin',adminlogin),
+    path('admincourses',admincourses),
+    path('sucess',sucess),
+    path('loginnav',loginnav)
 
 ]
 if settings.DEBUG:

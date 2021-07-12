@@ -67,6 +67,7 @@ def courses(request):
         l=cr.fetchall()
         for i in l:
                 if i[1]==email and i[2] ==password:
+                        request.session['uname']=email
                         return redirect(course)
 
         else:
@@ -78,7 +79,7 @@ def fpass(request):
 
 @csrf_exempt
 def forget(request):
-        email=request.POST.session('email')
+        email=request.session.get('uname')
         opass= request.POST.get('opass')
         npass= request.POST.get('npass')
         cpass= request.POST.get('cpass')
@@ -176,3 +177,24 @@ def display(request):
 #         print(l1)
 #
 #         return render(request,'display.html', {'ar': l1})
+def adminlogin(request):
+        return render(request, 'adminlogin.html')
+
+@csrf_exempt
+def admincourses(request):
+
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        s="select * from adminlogin"
+        cr.execute(s)
+        l=cr.fetchall()
+        for i in l:
+                if i[1]==email and i[2] ==password:
+                        return redirect(acourse)
+
+        else:
+           return HttpResponse("admin email or password is wrong")
+def sucess(request):
+        return render(request,'sucess.html')
+def loginnav(request):
+        return render(request,'loginnav.html')
